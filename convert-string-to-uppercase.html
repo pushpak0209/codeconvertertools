@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Best Tool for Convert a String To Uppercase </title>
+    <style>
+    .list-group a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .dottedLine {
+        border: 1px solid black;
+    }
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+    </style>
+    <script>
+      function upperCase(){
+        var input = document.getElementById("input").value;
+        var output = document.getElementById("output").value;
+        var result = input.toUpperCase();
+        document.getElementById("output").value = result;
+      }
+      // $('#myNavTabs a').click(function (evt) {
+      //   evt.preventDefault();
+      //   $(this).tab('show');
+      // });
+
+      // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      //   //new tab
+      //   console.log(e.target);
+        
+      //   //previous tab
+      //   console.log(e.relatedTarget);
+      // })
+    function clearValue(ele) {
+        ele.value = '';
+    }
+    function copyClipBoard() {
+      /* Get the text field */
+      var copyText = document.getElementById("output");
+
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+      /* Alert the copied text */
+      //alert("Copied the text: " + copyText.value);
+    }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="index.html">CodeConverterTools</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-3">
+        <h1 class="text-center"> Convert a String to Uppercase</h1>
+         <div class="col-12 d-flex align-items-center dottedLine"></div>
+         </br>
+        <div class="container overflow-hidden border border-dark rounded">
+            <div class="row gy-5">
+              <div class="col-12">
+                   <a href="#" onclick="return false;"><i class="fa fa-trash float-end " style="font-size:24px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Clear" onclick="document.getElementById('input').value = '';document.getElementById('output').value = ''"></i></a>
+                    <textarea class="form-control" id="input" rows="5" placeholder="Enter Your String Here" onkeyup="upperCase()"></textarea>
+              </div>
+              <div class="col-12">
+                <a href="#" onclick="return false;"><i class="fa fa-copy float-end" style="font-size:24px;"  data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to Clipboard" onclick="copyClipBoard()"></i></a>
+                <textarea class="form-control" id="output" rows="5" placeholder="Your Output Display Here"></textarea>
+              </div>
+            </div>
+          </br>
+          </div>
+        </br>
+          <div class="container border border-dark">
+          </br>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card alert alert-success" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">String to UpperCase Converter</h5>
+                    <p class="card-text">This tool converts a String or Text to an uppercase. It's transforms each of the character to Uppercase. Simple tools!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card alert alert-danger" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">String to UpperCase Converter</h5>
+                    <p class="card-text">This tool is totally free and online to convert your string to uppercase. You just need to write your string to inputbox and it will be automatically convert to uppercase.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card alert alert-dark" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">String to UpperCase Converter Example:</h5>
+                    <p class="card-text">string lowerCase: this is codeconvertertool website</p>
+                    <p class="card-text">STRING LOWERCASE: THIS IS CODECONVERTERTOOL WEBSITE</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </br>
+    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+          <a class="nav-link" href="index.html">CodeConverterTools</a>
+          </li>
+      </ul>
+      </div>
+    </nav>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
